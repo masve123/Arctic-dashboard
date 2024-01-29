@@ -42,3 +42,5 @@ Run : <code>npm run build</code>
 Default build output directory: /dist
 
 This command will generate a dist as build folder in the root of your template that you can upload to your server.
+
+For this repository, we have added a github action to automatically build the production version and deploy it to the EC2 instance. The page is now available at [https://cloud.arcticinstruments.com](https://cloud.arcticinstruments.com)
