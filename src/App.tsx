@@ -47,6 +47,9 @@ import SignUp from './pages/Authentication/SignUp';
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 
+// my imports
+import Home from './pages/Home';
+
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
 
 
@@ -63,6 +66,15 @@ function App() {
     <>
       <Routes>
         <Route element={<DefaultLayout />}>
+        <Route
+            path="/home"
+            element={
+              <>
+                <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <Home />
+              </>
+            }
+          />
           <Route
             index
             element={
