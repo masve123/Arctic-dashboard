@@ -70,7 +70,34 @@ function App() {
             path="/home"
             element={
               <>
-                <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <PageTitle title="Home" />
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <>
+                <PageTitle title="Virtual Servers" />
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <>
+                <PageTitle title="Catalog" />
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <>
+                <PageTitle title="Storage Volumes" />
                 <Home />
               </>
             }
