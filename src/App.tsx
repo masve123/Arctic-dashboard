@@ -1,58 +1,61 @@
-import { lazy, useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { lazy, useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import ECommerce from './pages/Dashboard/ECommerce';
-import Analytics from './pages/Dashboard/Analytics';
-import Marketing from './pages/Dashboard/Marketing';
-import CRM from './pages/Dashboard/CRM';
-import Calendar from './pages/Calendar';
-import Profile from './pages/Profile';
-import TaskKanban from './pages/Task/TaskKanban';
-import TaskList from './pages/Task/TaskList';
-import FormElements from './pages/Form/FormElements';
-import FormLayout from './pages/Form/FormLayout';
-import Tables from './pages/Tables';
-import Settings from './pages/Pages/Settings';
-import FileManager from './pages/Pages/FileManager';
-import DataTables from './pages/Pages/DataTables';
-import PricingTables from './pages/Pages/PricingTables';
-import ErrorPage from './pages/Pages/ErrorPage';
-import MailSuccess from './pages/Pages/MailSuccess';
-import Messages from './pages/Messages';
-import Inbox from './pages/Inbox';
-import Invoice from './pages/Invoice';
-import BasicChart from './pages/Chart/BasicChart';
-import AdvancedChart from './pages/Chart/AdvancedChart';
-import Alerts from './pages/UiElements/Alerts';
-import Buttons from './pages/UiElements/Buttons';
-import ButtonsGroup from './pages/UiElements/ButtonsGroup';
-import Badge from './pages/UiElements/Badge';
-import Breadcrumbs from './pages/UiElements/Breadcrumbs';
-import Cards from './pages/UiElements/Cards';
-import Dropdowns from './pages/UiElements/Dropdowns';
-import Modals from './pages/UiElements/Modals';
-import Tabs from './pages/UiElements/Tabs';
-import Tooltips from './pages/UiElements/Tooltips';
-import Popovers from './pages/UiElements/Popovers';
-import Accordion from './pages/UiElements/Accordion';
-import Notifications from './pages/UiElements/Notifications';
-import Pagination from './pages/UiElements/Pagination';
-import Progress from './pages/UiElements/Progress';
-import Carousel from './pages/UiElements/Carousel';
-import Images from './pages/UiElements/Images';
-import Videos from './pages/UiElements/Videos';
-import ResetPassword from './pages/Authentication/ResetPassword';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
-import Loader from './common/Loader';
-import PageTitle from './components/PageTitle';
+import ECommerce from "./pages/Dashboard/ECommerce";
+import Analytics from "./pages/Dashboard/Analytics";
+import Marketing from "./pages/Dashboard/Marketing";
+import CRM from "./pages/Dashboard/CRM";
+import Calendar from "./pages/Calendar";
+import Profile from "./pages/Profile";
+import TaskKanban from "./pages/Task/TaskKanban";
+import TaskList from "./pages/Task/TaskList";
+import FormElements from "./pages/Form/FormElements";
+import FormLayout from "./pages/Form/FormLayout";
+import Tables from "./pages/Tables";
+import Settings from "./pages/Pages/Settings";
+import FileManager from "./pages/Pages/FileManager";
+import DataTables from "./pages/Pages/DataTables";
+import PricingTables from "./pages/Pages/PricingTables";
+import ErrorPage from "./pages/Pages/ErrorPage";
+import MailSuccess from "./pages/Pages/MailSuccess";
+import Messages from "./pages/Messages";
+import Inbox from "./pages/Inbox";
+import Invoice from "./pages/Invoice";
+import BasicChart from "./pages/Chart/BasicChart";
+import AdvancedChart from "./pages/Chart/AdvancedChart";
+import Alerts from "./pages/UiElements/Alerts";
+import Buttons from "./pages/UiElements/Buttons";
+import ButtonsGroup from "./pages/UiElements/ButtonsGroup";
+import Badge from "./pages/UiElements/Badge";
+import Breadcrumbs from "./pages/UiElements/Breadcrumbs";
+import Cards from "./pages/UiElements/Cards";
+import Dropdowns from "./pages/UiElements/Dropdowns";
+import Modals from "./pages/UiElements/Modals";
+import Tabs from "./pages/UiElements/Tabs";
+import Tooltips from "./pages/UiElements/Tooltips";
+import Popovers from "./pages/UiElements/Popovers";
+import Accordion from "./pages/UiElements/Accordion";
+import Notifications from "./pages/UiElements/Notifications";
+import Pagination from "./pages/UiElements/Pagination";
+import Progress from "./pages/UiElements/Progress";
+import Carousel from "./pages/UiElements/Carousel";
+import Images from "./pages/UiElements/Images";
+import Videos from "./pages/UiElements/Videos";
+import ResetPassword from "./pages/Authentication/ResetPassword";
+import SignIn from "./pages/Authentication/SignIn";
+import SignUp from "./pages/Authentication/SignUp";
+import Loader from "./common/Loader";
+import PageTitle from "./components/PageTitle";
 
 // my imports
-import Home from './pages/Home';
-import Applications from './pages/Applications';
+import Home from "./pages/Home";
+import Applications from "./pages/Applications";
+import VirtualServers from "./pages/VirtualServers";
+import CloudStorage from "./pages/CloudStorage";
+import ApiAccess from "./pages/ApiAccess";
+import CloudNotifications from "./pages/CloudNotifications";
 
-const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
-
+const DefaultLayout = lazy(() => import("./layout/DefaultLayout"));
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -67,7 +70,7 @@ function App() {
     <>
       <Routes>
         <Route element={<DefaultLayout />}>
-        <Route
+          <Route
             path="/home"
             element={
               <>
@@ -77,11 +80,11 @@ function App() {
             }
           />
           <Route
-            path="/home"
+            path="/virtualServers"
             element={
               <>
                 <PageTitle title="Virtual Servers" />
-                <Home />
+                <VirtualServers />
               </>
             }
           />
@@ -95,11 +98,20 @@ function App() {
             }
           />
           <Route
-            path="/home"
+            path="/cloudStorage"
             element={
               <>
-                <PageTitle title="Storage Volumes" />
-                <Home />
+                <PageTitle title="Storage" />
+                <CloudStorage />
+              </>
+            }
+          />
+          <Route
+            path="/apiAccess"
+            element={
+              <>
+                <PageTitle title="Api Access" />
+                <ApiAccess />
               </>
             }
           />
@@ -136,6 +148,15 @@ function App() {
               <>
                 <PageTitle title="CRM Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
                 <CRM />
+              </>
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <>
+                <PageTitle title="Notifications" />
+                <CloudNotifications />
               </>
             }
           />
