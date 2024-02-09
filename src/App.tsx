@@ -49,6 +49,7 @@ import PageTitle from './components/PageTitle';
 
 // my imports
 import Home from './pages/Home';
+import Applications from './pages/Applications';
 
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
 
@@ -85,11 +86,11 @@ function App() {
             }
           />
           <Route
-            path="/home"
+            path="/applications"
             element={
               <>
-                <PageTitle title="Catalog" />
-                <Home />
+                <PageTitle title="Applications" />
+                <Applications />
               </>
             }
           />

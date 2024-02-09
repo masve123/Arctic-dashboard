@@ -148,7 +148,7 @@ const DropdownMessage = () => {
                 <h6 className="text-sm font-medium text-black dark:text-white">
                   Henry Dholi
                 </h6>
-                <p className="text-sm">I cam across your profile and...</p>
+                <p className="text-sm">I came across your profile and...</p>
                 <p className="text-xs">1day ago</p>
               </div>
             </Link>
